@@ -3,7 +3,7 @@ const app = express()
 const mongoose = require('mongoose')
 const api = require('./api')
 
-mongoose.connect('mongodb://tnptop:tnptop@ds133550.mlab.com:33550/tnptop-urlshortener')
+mongoose.connect(process.env.MONGO_URL)
 
 app.use(express.static('public'))
 
